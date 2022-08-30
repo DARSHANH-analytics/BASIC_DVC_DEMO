@@ -1,9 +1,12 @@
 stages:
   stage_01:
-    cmd: python stage_01.py    
+    cmd: python stage_01.py
+    # Stage 1, file to start execution with 
     deps:
+    # dependencies noted here
       - stage_01.py
     outs:
+    # output files noted here
       - artifacts01.txt
 
   stage_02:
