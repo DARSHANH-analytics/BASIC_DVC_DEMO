@@ -1,0 +1,26 @@
+stages:
+  stage_01:
+    cmd: python stage_01.py    
+    deps:
+      - stage_01.py
+    outs:
+      - artifacts01.txt
+
+  stage_02:
+    cmd: python stage_02.py
+    # Stage 2, file to start execution with     
+    deps:
+    # dependencies noted here
+      - stage_02.py
+      - artifacts01.txt
+
+  stage_03:
+    cmd: python stage_03.py
+    # Stage 2, file to start execution with     
+    deps:
+    # dependencies noted here
+      - stage_03.py
+      - artifacts01.txt
+    outs:
+    # output files noted here
+      - artifacts02.txt
